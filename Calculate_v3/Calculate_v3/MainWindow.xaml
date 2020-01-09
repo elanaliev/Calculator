@@ -1,0 +1,44 @@
+﻿<Window x:Class="Calculate_v3.MainWindow" 
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculate_v3"
+        mc:Ignorable="d"
+        
+        Title="Calc" Height="450.843" Width="671.199" ResizeMode="CanMinimize" Background="#FF3F3F46">
+
+    <Grid Margin="0,0,0,-8">
+        <Grid HorizontalAlignment="Left" Height="263" Margin="10,143,0,0" VerticalAlignment="Top" Width="332">
+            <Button x:Name="btn1" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}"  Click="Button_Click" />
+            <Button Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="65,0,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="Button_Click"/>
+            <Button Content="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="130,0,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="Button_Click"/>
+            <Button Content="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="0,65,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="Button_Click"/>
+            <Button Content="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="65,65,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="Button_Click"/>
+            <Button Content="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="130,65,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="Button_Click"/>
+            <Button Content="7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="0,130,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="Button_Click"/>
+            <Button Content="8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="65,130,0,0" FontSize="24" Foreground="White" Template="{DynamicResource Buttons}" Click="Button_Click"/>
+            <Button Content="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="130,130,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="Button_Click"/>
+            <Button Content="C" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="0,195,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="cl_click"/>
+            <Button Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="65,195,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="Button_Click"/>
+            <Button Content="=" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="130,195,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="ravno"/>
+            <Button Content="+" VerticalAlignment="Top" Height="60" Margin="272,0,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="d_button" HorizontalAlignment="Left" Width="60"/>
+            <Button Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="272,65,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="d_button"/>
+            <Button Content="*" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="272,130,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="d_button"/>
+            <Button Content="/" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Margin="272,195,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="d_button"/>
+        </Grid>
+        <TextBlock x:Name="Tbe" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="60" Width="636" RenderTransformOrigin="0.5,0.5" FontSize="48" Foreground="White" FontFamily="Arial" ScrollViewer.HorizontalScrollBarVisibility="Visible"><InlineUIContainer>
+                <TextBox x:Name="Tb1" TextWrapping="Wrap" Background="{x:Null}" Foreground="White" SelectionBrush="#FF7500D7" Width="609" BorderBrush="{x:Null}" IsReadOnly="True"/>
+            </InlineUIContainer></TextBlock>
+        <TextBlock x:Name="Tbu" HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="59" Width="636" RenderTransformOrigin="0.5,0.5" FontSize="48" Foreground="White" FontFamily="Arial" ScrollViewer.HorizontalScrollBarVisibility="Visible"><InlineUIContainer>
+                <TextBox x:Name="Tb2" TextWrapping="Wrap" Width="609" BorderBrush="{x:Null}" SelectionBrush="#FF7500D7" Foreground="White" Background="{x:Null}" IsReadOnly="True"/>
+            </InlineUIContainer></TextBlock>
+        <TextBox x:Name="Tb3" TextWrapping="Wrap" Margin="347,143,10,55" Background="{x:Null}" BorderBrush="#7F0CFF00" Foreground="White" FontSize="16" VerticalScrollBarVisibility="Visible" IsReadOnly="True" Height="218" Width="299" HorizontalAlignment="Center" VerticalAlignment="Center" d:IsHidden="True"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="470,366,0,0" VerticalAlignment="Top" Width="40" Height="40" Template="{DynamicResource Button_1}" Click="Btn_t"/>
+        <Button x:Name="btnp" Content="%" VerticalAlignment="Top" Height="60" Margin="352,143,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}" Click="Proc_btn" HorizontalAlignment="Left" Width="60" Visibility="Collapsed"/>
+        <Button Content="?" VerticalAlignment="Top" Height="60" Margin="417,143,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}"  HorizontalAlignment="Left" Width="60" Visibility="Collapsed"/>
+        <Button Content="?" VerticalAlignment="Top" Height="60" Margin="482,143,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}"  HorizontalAlignment="Left" Width="60" Visibility="Collapsed"/>
+        <Button Content="?" VerticalAlignment="Top" Height="60" Margin="547,143,0,0" FontSize="22" Foreground="White" Template="{DynamicResource Buttons}"  HorizontalAlignment="Left" Width="60" Visibility="Collapsed"/>
+    </Grid>
+</Window>
+    
