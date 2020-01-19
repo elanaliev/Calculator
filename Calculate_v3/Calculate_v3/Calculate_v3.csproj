@@ -100,5 +100,8 @@
   <ItemGroup>
     <Resource Include="Res\Apps.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\DeleteToastQuickAction.scale-80.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

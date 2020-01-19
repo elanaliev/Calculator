@@ -297,11 +297,15 @@ namespace Calculate_v3
             {
                 Tb3.Height = 0;
                 btnp.Visibility = Visibility.Visible;
+                btnd.Visibility = Visibility.Visible;
+                sq.Visibility = Visibility.Visible;
             }
             else
             {
                 Tb3.Height = 218;
                 btnp.Visibility = Visibility.Collapsed;
+                btnd.Visibility = Visibility.Collapsed;
+                sq.Visibility = Visibility.Collapsed;
             }
            
         }
@@ -322,6 +326,45 @@ namespace Calculate_v3
 
             }
             
+        }
+
+        private void cl1_click(object sender, RoutedEventArgs e)
+        {
+            Tb1.Clear();
+        }
+
+        private void cl2_click(object sender, RoutedEventArgs e)
+        {
+            Tb2.Clear();
+            d = null;
+            d2 = null;
+            num1 = 0;
+            num2 = 0;
+            b = false;
+        }
+
+        private void cl3_click(object sender, RoutedEventArgs e)
+        {
+            Tb3.Clear();
+        }
+        string sup;
+        private void x2_c(object sender, RoutedEventArgs e)
+        {
+            sup = btnd.Content.ToString();
+            double n;
+            n = Convert.ToDouble(Tb1.Text);
+            Tb1.Text = (n * n).ToString();
+            Tb3.Text += $" {n + sup} = {n} * {n} = {Tb1.Text}\n";
+        }
+
+        private void sqr(object sender, RoutedEventArgs e)
+        {
+            double a;
+            double s;
+            a = Convert.ToDouble(Tb1.Text);
+            s = Math.Sqrt(a);
+            Tb1.Text = s.ToString();
+            Tb3.Text += $"Sqrt({a}) = {s}\n";
         }
     }
 }
