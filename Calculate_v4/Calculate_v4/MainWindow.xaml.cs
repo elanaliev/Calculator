@@ -38,7 +38,7 @@ namespace Calculate_v4
         #region Main Controls
         private void CloseButton_Click(object sender, RoutedEventArgs e) => this.Close();
         private void LMBFocus(object sender, MouseButtonEventArgs e) => this.DragMove();
-        private void ClearButton_Click(object sender, RoutedEventArgs e) => MainTBox.Text = "0";
+        private void ClearButton_Click(object sender, RoutedEventArgs e) { MainTBox.Text = "0"; ATBox.Text = string.Empty; }
         #endregion
 
         private void NumButton_Click(object sender, RoutedEventArgs e)
